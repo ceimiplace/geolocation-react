@@ -1,8 +1,9 @@
-body {
+.spinner-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  flex-direction: column;
+  gap: 20px;
 }
 .box {
   height: 100px;
@@ -11,6 +12,9 @@ body {
   border-top-color: rgb(19, 146, 146);
   animation: spin 1s linear infinite;
   border-radius: 50%;
+}
+.text {
+  font-weight: bold;
 }
 @keyframes spin {
   from {

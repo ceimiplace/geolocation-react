@@ -1,6 +1,7 @@
 import React from "react";
 import Spinner from "./Spinner";
 import SeasonDisplAY from "./SeasonDisplay";
+import "./App.css";
 class App extends React.Component {
   state = { lat: null, errorMessage: "" };
 
@@ -19,9 +20,19 @@ class App extends React.Component {
       return <SeasonDisplAY lat={this.state.lat} />;
     }
     if (!this.state.lat && this.state.errorMessage) {
-      return <div>{this.state.errorMessage}</div>;
+      return (
+        <div className="result">
+          <div>{this.state.errorMessage}</div>
+        </div>
+      );
     }
-    return <Spinner />;
+    return (
+      <Spinner
+        height={`100vh`}
+        width={`100vw`}
+        text={"Please allow our detection"}
+      />
+    );
   }
 }
 export default App;
