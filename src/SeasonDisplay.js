@@ -1,3 +1,4 @@
+import "./SeasonDisplay.css";
 function getSeason(lat, month) {
   if (month < 2 && month > 8) {
     return lat > 0 ? "summer" : "winter";
@@ -5,17 +6,25 @@ function getSeason(lat, month) {
     return lat > 0 ? "winter" : "summer";
   }
 }
-
+const seasons = {
+  summer: {
+    text: " Lets hit the beach ",
+    iconName: "sun",
+  },
+  winter: {
+    text: " Brr its chilly",
+    iconName: "snowflake",
+  },
+};
 function SeasonDisplAY(props) {
   const season = getSeason(props.lat, new Date().getMonth());
-  const text = season === "winter" ? "Brrr,its chilly" : " Lets hit the beach ";
-  const icon = season === "winter" ? "snowflake" : "sun";
+  const { text, iconName } = seasons[season];
   return (
-    <>
-      <i className={`fa-solid fa-${icon}`}></i>
+    <div className={`season-display ${season}`}>
+      <i className={`icon-left fa-solid fa-4x fa-${iconName}`}></i>
       <h1>{text}</h1>
-      <i className={`fa-solid fa-${icon}`}></i>
-    </>
+      <i className={`icon-right fa-solid fa-4x fa-${iconName}`}></i>
+    </div>
   );
 }
 export default SeasonDisplAY;
