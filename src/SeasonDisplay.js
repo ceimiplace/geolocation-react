@@ -1,4 +1,3 @@
-import "./SeasonDisplay.css";
 function getSeason(lat, month) {
   if (month < 2 && month > 8) {
     return lat > 0 ? "summer" : "winter";
@@ -10,12 +9,12 @@ const seasons = {
   summer: {
     text: " Lets hit the beach ",
     iconName: "sun",
-    classNames: "text-red-600",
+    classNames: "text-red-600 text-3xl",
   },
   winter: {
     text: " Brr its chilly",
     iconName: "snowflake",
-    classNames: "text-blue-600",
+    classNames: "text-blue-600 text-3xl",
   },
 };
 function SeasonDisplAY(props) {
@@ -28,7 +27,7 @@ function SeasonDisplAY(props) {
       <i
         className={`icon-left fa-solid fa-4x fa-${iconName} absolute top-10 left-10`}
       ></i>
-      <h1 className={`${classNames} text-3xl`}>{text}</h1>
+      <h1 className={`${classNames} `}>{text}</h1>
       <i
         className={`icon-right fa-solid fa-4x fa-${iconName} absolute right-10 bottom-10`}
       ></i>
