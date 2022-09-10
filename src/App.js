@@ -1,7 +1,7 @@
 import React from "react";
 import Spinner from "./Spinner";
 import SeasonDisplAY from "./SeasonDisplay";
-import "./App.css";
+
 class App extends React.Component {
   state = { lat: null, errorMessage: "" };
 
@@ -21,8 +21,8 @@ class App extends React.Component {
     }
     if (!this.state.lat && this.state.errorMessage) {
       return (
-        <div className="result">
-          <div>{this.state.errorMessage}</div>
+        <div className="flex justify-center items-center h-screen">
+          <div className="">{this.state.errorMessage}</div>
         </div>
       );
     }
