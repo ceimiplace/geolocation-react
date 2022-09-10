@@ -13,4 +13,5 @@ class Spinner extends React.Component {
     );
   }
 }
+Spinner.defaultProps = { text: "Loading..." };
 export default Spinner;
