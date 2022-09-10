@@ -22,14 +22,13 @@ class App extends React.Component {
     if (!this.state.lat && this.state.errorMessage) {
       return (
         <div className="flex justify-center items-center h-screen">
-          <div className="">{this.state.errorMessage}</div>
+          <div>{this.state.errorMessage}</div>
         </div>
       );
     }
     return (
       <Spinner
-        height={`100vh`}
-        width={`100vw`}
+        className={"h-screen w-screen"}
         text={"Please allow our detection"}
       />
     );

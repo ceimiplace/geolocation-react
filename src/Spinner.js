@@ -6,10 +6,7 @@ class Spinner extends React.Component {
   }
   render() {
     return (
-      <div
-        className="spinner-container"
-        style={{ height: this.props.height, width: this.props.width }}
-      >
+      <div className={`spinner-container ${this.props.className}`}>
         <div className="box"></div>
         <div className="text">{this.props.text}</div>
       </div>
