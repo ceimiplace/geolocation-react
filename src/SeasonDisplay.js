@@ -9,19 +9,23 @@ const seasons = {
   summer: {
     text: " Lets hit the beach ",
     iconName: "sun",
-    classNames: "text-red-600 text-3xl",
+    classNames: "text-red-600 text-3xl ",
+    background: "bg-orange-300",
   },
   winter: {
     text: " Brr its chilly",
     iconName: "snowflake",
-    classNames: "text-blue-600 text-3xl",
+    classNames: "text-blue-600 text-3xl bg-blue-300",
+    background: "bg-blue-300",
   },
 };
 function SeasonDisplAY(props) {
   const season = getSeason(props.lat, new Date().getMonth());
-  const { text, iconName, classNames } = seasons[season];
+  const { text, iconName, classNames, background } = seasons[season];
   return (
-    <div className={`season-display ${season}`}>
+    <div
+      className={`season-display ${season} ${background} h-full w-full flex justify-center items-center`}
+    >
       <i
         className={`icon-left fa-solid fa-4x fa-${iconName} absolute top-10 left-10`}
       ></i>
