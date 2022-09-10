@@ -21,13 +21,11 @@ function SeasonDisplAY(props) {
   const season = getSeason(props.lat, new Date().getMonth());
   const { text, iconName, classNames } = seasons[season];
   return (
-    <div
-      className={`season-display ${season}  flex justify-center items-center h-screen w-screen`}
-    >
+    <div className={`season-display ${season}`}>
       <i
         className={`icon-left fa-solid fa-4x fa-${iconName} absolute top-10 left-10`}
       ></i>
-      <h1 className={`${classNames} `}>{text}</h1>
+      <h1 className={`${classNames}`}>{text}</h1>
       <i
         className={`icon-right fa-solid fa-4x fa-${iconName} absolute right-10 bottom-10`}
       ></i>
