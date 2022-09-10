@@ -4,11 +4,13 @@
   align-items: center;
   flex-direction: column;
   gap: 20px;
+  background-color: rgb(27, 26, 26);
+  color: white;
 }
 .box {
   height: 100px;
   width: 100px;
-  border: 15px solid rgb(143, 162, 182);
+  border: 10px solid rgb(139, 142, 146);
   border-top-color: rgb(19, 146, 146);
   animation: spin 1s linear infinite;
   border-radius: 50%;
